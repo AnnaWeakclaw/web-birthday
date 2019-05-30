@@ -1,8 +1,15 @@
-
+<head>
+<title>BirthDay!</title>
+</head>
+<style>
+body {
+  background-color: lightblue;
+}
+</style>
 <% if @today.day == @day && @today.month == @month%>
-<h1>"Happy Birthday <%=@name%>!"</h1>
+  <h1>"Happy Birthday <%=@name%>!"</h1>
 <% elsif @calc < 2 %>
-<h1>"Your Birthday will be in <%=@calc.to_i%> day, <%=@name%>!"</h1>
+  <h1>"Your Birthday will be in <%=@calc.to_i%> day, <%=@name%>!"</h1>
 <%else%>
-<h1>"Your Birthday will be in <%=@calc.to_i%> days, <%=@name%>!"</h1>
+  <h1>"Your Birthday will be in <%=@calc.to_i%> days, <%=@name%>!"</h1>
 <% end %>
