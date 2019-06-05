@@ -25,6 +25,7 @@ input[type=submit] {
 
 <body>
 <h1>Hello there!</h1>
+<% if @name.nil?%>
 <h2>What is your name?</h2>
 
 <form action="/bday" method="post">
@@ -47,3 +48,12 @@ input[type=submit] {
   </select><br>
   <input type="submit" value="Go!">
 </form>
+
+<% else%>
+<h2>Hi <%=@name%>,<br>
+Your Birthday is on: <%=@day%>.<%=@month%>
+</h2>
+<% @name = nil%>
+<form action='/your-bday2' method="get">
+<input type="submit" value="Try again!">
+<%end%>
